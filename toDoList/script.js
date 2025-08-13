@@ -6,13 +6,13 @@ function addTask() {
         alert("404 !!! The Data Is MiSSing. < />");
 
     }else{
+        let taskText = inputBox.value;
         let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
-        listContainer.appendChild(li);
-
+        li.textContent = taskText;
         let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
+        span.innerHTML = "&#10006;"; // Unicode for ×
         li.appendChild(span);
+        listContainer.appendChild(li);
     }
 
     inputBox.value = "";
